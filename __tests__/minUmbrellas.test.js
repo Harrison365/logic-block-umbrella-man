@@ -1,6 +1,7 @@
 const minUmbrellas = require("../minUmbrellas");
 
 describe("minUmbrellas", () => {
+  const startTime = performance.now();
   test("should return 0 when passing an empty array", () => {
     expect(minUmbrellas([])).toBe(0);
   });
@@ -57,4 +58,6 @@ describe("minUmbrellas", () => {
       ])
     ).toBe(3);
   });
+  const endTime = performance.now();
+  console.log(endTime - startTime); //ms
 });
